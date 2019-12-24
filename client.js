@@ -14,7 +14,7 @@ const optionsPut = {
     method: 'PUT',
     headers: {
         'Content-Type': 'application/json'
-    }
+        }
     
 }
     var statusCode= null, reqGet =null, reqPut =null;
@@ -34,7 +34,8 @@ const optionsPut = {
             reqGet.end()
         }
         
-    }else if ((process.argv[2] == "PUT") || (process.argv[2] == "put")) {
+    }
+    else if ((process.argv[2] == "PUT") || (process.argv[2] == "put")) {
         try{
             reqPut = http.request(optionsPut, res => {
                 console.log(`statusCode: ${res.statusCode}`);
@@ -51,9 +52,8 @@ const optionsPut = {
             })
             reqPut.end()
         }
-    
-    
-    }else{
+    }
+    else{
         statusCode = 404;
         console.log(statusCode,' Request not found');
     }
