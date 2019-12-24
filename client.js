@@ -1,4 +1,4 @@
-//console.log(process.argv);
+
 const http = require('http');
 const optionsGet = {
     hostname: 'localhost',
@@ -6,7 +6,7 @@ const optionsGet = {
     path: '/',
     method: 'GET'
 }
-// put rquest 
+ 
 const optionsPut = {
     hostname: 'localhost',
     port: 8080,
@@ -51,7 +51,7 @@ const optionsPut = {
             })
             reqPut.end()
         }
-    //reqPut.write(data)
+    
     
     }else{
         statusCode = 404;
